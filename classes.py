@@ -8,7 +8,7 @@ class Student:
         self.is_graduated = is_graduated
         # self.is_graduated = False 같은 걸로도 세팅 가능, 생성자 파라미터에서 빼야함
 
-    # 메서드
+    # 메소드
     def study(self):
         print(f"{self.name} 학생은 공부 중 입니다.")
         # 생성자에서 정의된 name을 self.name으로 불러올 수 있다
@@ -51,13 +51,14 @@ class Foreign_student(Student):
     # 이렇게 상속받는 순간 Student 클래스에 정의된 모든 내용을 가져오게 된다
 
     def __init__(self, name, major, is_graduated, country):
-        super().__init__(name, major, is_graduated)
         # 부모 클래스에 있는 __init__을 쓸 수 있는 코드
+        super().__init__(name, major, is_graduated)
 
-        self.country = country
         # 새로운 인자를 받는 코드
+        self.country = country
 
     # 메소드 오버라이딩
+
     def study(self):
         print(f"{self.name} is studying.")
 
