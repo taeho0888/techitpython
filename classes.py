@@ -58,7 +58,6 @@ class Foreign_student(Student):
         self.country = country
 
     # 메소드 오버라이딩
-
     def study(self):
         print(f"{self.name} is studying.")
 
